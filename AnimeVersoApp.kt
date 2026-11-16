@@ -234,7 +234,7 @@ private fun IntroScreen(onStart: () -> Unit, onVoice: () -> Unit) {
                     val x = size.width * i / 21f
                     val offset = ((i % 5) * 13f) + drift * (if (i % 2 == 0) 1 else -1)
                     drawLine(colors[i % colors.size].copy(alpha = 0.48f), Offset(centerX, centerY), Offset(x, if (i % 2 == 0) 0f else size.height), strokeWidth = if (i % 4 == 0) 3f else 1.2f, cap = StrokeCap.Round)
-                    drawCircle(colors[i % colors.size].copy(alpha = 0.45f), radius = 2.5f + (i % 3), center = Offset(x, (offset + size.height * ((i * 17 % 100) / 100f)).coerceIn(8f, size.height - 8f))
+                    drawCircle(colors[i % colors.size].copy(alpha = 0.45f), radius = 2.5f + (i % 3), center = Offset(x, (offset + size.height * ((i * 17 % 100) / 100f)).coerceIn(8f, size.height - 8f)))
                 }
             }
             Column(Modifier.fillMaxSize().padding(12.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.SpaceBetween) {
